@@ -9,6 +9,14 @@ const calistoga = Calistoga({ subsets: ["latin"], variable: "--font-serif", weig
 export const metadata: Metadata = {
   title: "Daniel Omoanon | Portfolio",
   description: "Professional portfolio highlighting innovative digital solutions, crafted with React, Node.js, and a passion for technology.",
+    icons: {
+    icon: [
+      { url: "/daniel.svg", type: "image/png", sizes: "32x32" },
+      { url: "/daniel.png", type: "image/png", sizes: "16x16" },
+    ],
+    shortcut: { url: "/daniel.png" },
+    apple: { url: "/daniel.png" },
+  },
 };
 
 export default function RootLayout({
