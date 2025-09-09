@@ -15,7 +15,11 @@ export const Header = () => {
         <a href="#home" className="nav-item">Home</a>
         <a href="#projects" className="nav-item">Project</a>
         <a href="#about" className="nav-item">About</a>
-        <a href="#" className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900">Contact</a>
+        <a href="mailto:drimbignation@gmail.com" className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900">Contact</a>
+        {/* className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900" */}
+
+        {/* <a href="mailto:andupu4@gmail.com">andupu4@gmail.com</a> */}
+        {/* <span className="font-bold">Contact me: </span> */}
       </nav>
     </div>
   );
