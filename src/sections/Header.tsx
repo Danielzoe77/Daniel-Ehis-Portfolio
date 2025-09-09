@@ -12,9 +12,9 @@ export const Header = () => {
   return (
     <div className="fixed top-3 left-1/2 -translate-x-1/2 z-10">
       <nav className="flex gap-1 p-0.5 border-white/15 rounded-full bg-white/10 backdrop-blur-0">
-        <a href="#" className="nav-item">Home</a>
-        <a href="#" className="nav-item">Project</a>
-        <a href="#" className="nav-item">About</a>
+        <a href="#home" className="nav-item">Home</a>
+        <a href="#projects" className="nav-item">Project</a>
+        <a href="#about" className="nav-item">About</a>
         <a href="#" className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900">Contact</a>
       </nav>
     </div>

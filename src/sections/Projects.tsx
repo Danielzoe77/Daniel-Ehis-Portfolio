@@ -1,6 +1,9 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import BigfredoLandingPage from "@/assets/images/big-fredo.png";
+import eathathonMenu from "@/assets/images/eathathon.png";
+import cloneGemini from "@/assets/images/gemini clone.png";
+import reactStore from "@/assets/images/react store.png";
+import weatherApp from "@/assets/images/weather app.png";
+import digitalAgency from "@/assets/images/digital agency.png";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -10,56 +13,93 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Big Fredo Cleaning Services",
+    year: "2020",
+    title: "Big Fredo Landing Page",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://bigfredocleaning.vercel.app/",
+    image: BigfredoLandingPage,
   },
   {
-    company: "Innovative Co",
+    company: "De Green Eatery",
     year: "2021",
-    title: "Light Saas Landing Page",
+    title: "Eathathon Ecommerce website",
     results: [
       { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Added new menu items" },
+      { title: "Customers can order food online" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://eathathon.vercel.app/",
+    image: eathathonMenu,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Weather Forecast App",
+    year: "2022",
+    title: "Weather Forecast Web Application",
+    results: [
+      { title: "Interactive Weather Forecast Dashboard" },
+      { title: "Seamless Weather Monitoring Experience" },
+      { title: "Accurate Weather Tracking Web App" },
+    ],
+    link: "https://weather-app-zoe.vercel.app/",
+    image: weatherApp,
+  },
+  {
+    company: "AI Startup",
+    year: "2024",
+    title: "Clonining Gemini AI website",
+    results: [
+      { title: "Improved conversational interface for a smoother user experience" },
+      { title: "Integrated prompt-based input for real-time AI responses" },
+      { title: "Optimized for mobile, boosting engagement by 35%" },
+    ],
+    link: "https://clone-ai-eight.vercel.app/",
+    image: cloneGemini,
+  },
+  {
+    company: "Digital Marketing Agency",
+    year: "2024",
+    title: "High-Performance Marketing Website",
+    results: [
+      { title: "Streamlined navigation for a smoother client journey" },
+      { title: "Integrated campaign management tools for real-time updates" },
+      { title: "Optimized for mobile, increasing on-the-go engagement by 35%" },
+    ],
+    link: "https://ophirbrooks.vercel.app/",
+    image: digitalAgency ,
+  },
+  {
+    company: "Single Page Ecommerce",
+    year: "2022",
+    title: "Ecommerce website built with typescript",
     results: [
       { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Faster loading times" },
+      { title: "Strictly for desktop view" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://reactstore-ecommerce.vercel.app/",
+    image: reactStore,
   },
+
 ];
 
 export const ProjectsSection = () => {
-  return <section className="pb-10 lg:py-24">
+  return <section id="projects"  className="pb-10 lg:py-24">
     <div className="container">
-      <SectionHeader eyebrow="Real-world Results" title="Featured Projects" description="See how i can transform concepts into engaging digital experiences" />
+      <SectionHeader eyebrow="Delivering tangible results" title="Featured Projects" description="See how i can transform concepts into engaging digital experiences" />
 
       <div className="flex md:mt-20 flex-col gap-20 mt-10">
-        {portfolioProjects.map((project,projectIndex) => (
-           <Card key={project.title} className="px-8 lg:pt-16 lg:px-20 pb-0 lg:pb-0 md:pt-12 md:px-10 pt-4 sticky top-0 "
-           style ={{
-            top : `calc(64px + ${projectIndex * 40}px}`,
-           }}  >
+        {portfolioProjects.map((project, projectIndex) => (
+          <Card key={project.title} className="px-8 lg:pt-16 lg:px-20 pb-0 lg:pb-0 md:pt-12 md:px-10 pt-4 sticky top-0 "
+            style={{
+              top: `calc(64px + ${projectIndex * 40}px}`,
+            }}  >
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-              <div className="lg:pb-16"> 
+              <div className="lg:pb-16">
                 <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text ">
                   <span>
                     {
@@ -80,7 +120,7 @@ export const ProjectsSection = () => {
                 <hr className="border-t-2 md:mt-5 border-white/5 mt-4" />
                 <ul className="flex flex-col md:mt-5 gap-4 mt-4" >
                   {
-                    project.results.map((result, index )=> (
+                    project.results.map((result, index) => (
                       <li className="flex gap-2 text-sm md:text-base mt-2  text-white/50 ">
                         <CheckIcon className="inline-block md:size-6 size-5 mr-2" />
                         <span>{result.title}</span></li>

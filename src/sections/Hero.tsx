@@ -7,9 +7,9 @@ import SparkleIcon from '@/assets/icons/sparkle.svg';
 import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
-  return <div className="py-32 lg:py-60 md:py-48 relative z-0 overflow-x-clip">
+  return <div id="home" className="py-32 lg:py-60 md:py-48 relative z-0 overflow-x-clip">
 
-    <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%, black_70%,transparent)]">
+    <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%, black_70%,transparent)] pointer-events-none">
 
     <div className="absolute inset-0 -z-30 opacity-5" style={{ 
       backgroundImage : `url(${grainImage.src})`
@@ -21,7 +21,7 @@ export const HeroSection = () => {
     <div className="size-[1020px] hero-ring "></div>
     <div className="size-[1220px] hero-ring "></div>
     {/* this div right here made it possible for the centering and rotating */}
-   <HeroOrbit size={800} rotation={-72}shouldOrbit orbitDuration="48s" shouldSpin spinDuration="10s">
+   <HeroOrbit size={800} rotation={-72}shouldOrbit orbitDuration="48s" shouldSpin spinDuration="10s" >
     <StarIcon className="size-28 text-emerald-300" /> 
    </HeroOrbit>
    <HeroOrbit size={550} rotation={20} shouldOrbit orbitDuration="38s" shouldSpin spinDuration="3s">
@@ -75,13 +75,23 @@ export const HeroSection = () => {
   <p className="mt-4 text-center text-white/60 md:text-lg" >I specialize in transforming designs into functional, high-performance web application. Lets discuss your next project </p>
    </div>
  <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
-    <button className="inline-flex border border-white/15 items-center gap-2 px-6 h-12 rounded-xl">
-      <span className="font-semibold ">
+    {/* <button  className="inline-flex border border-white/15 items-center gap-2 px-6 h-12 rounded-xl">
+      <span className="font-semibold cursor-pointer ">
         Explore My work
         </span>
         <ArrowDown className="size-4" />
       
-    </button>
+    </button> */}
+
+    <a
+  href="#projects"
+  className="inline-flex border border-white/15 items-center gap-2 px-6 h-12 rounded-xl cursor-pointer"
+>
+  <span className="font-semibold">
+    Explore My Work
+  </span>
+  <ArrowDown className="size-4" />
+</a>
      <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl  ">
       <span>
         👍

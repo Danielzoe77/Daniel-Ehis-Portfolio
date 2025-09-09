@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import { TechIcon } from "@/components/TechIcon";
 import StarIcon from "@/assets/icons/star.svg";
-import booksImage from "@/assets/images/book-cover.png";
+import booksImage from "@/assets/images/power.jpg";
 import Image from "next/image";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import ReactIcon from "@/assets/icons/react.svg";
@@ -116,7 +116,7 @@ const hobbies = [
 
 export const AboutSection = () => {
   const constraintRef =  useRef(null)
-  return <div className="py-20 lg:py-28">
+  return <div id="about" className="py-20 lg:py-28">
     <div className="container">
     <SectionHeader eyebrow="About Me" title="A Glimpse into my world" description="Learn More About Me, Who i am and what i do" />
     <div className="mt-20 flex flex-col md:flex-col gap-8">
